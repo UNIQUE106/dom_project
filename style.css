@@ -14,7 +14,8 @@ li {
 header {
     position: sticky;
     background-color: white;
-    top: 10px;
+    top: 0;
+    padding-top: 10px;
 }
 
 main {
@@ -71,7 +72,7 @@ dialog p {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    & div {
+    & .des {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -90,7 +91,9 @@ dialog p {
 .inc {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
     & > button {
         padding: 10px 20px;
@@ -105,8 +108,8 @@ dialog p {
 
     & span {
         display: flex;
-        margin-right: -20px;
-        margin-left: 10px;
+        /* margin-right: -20px;
+        margin-left: 10px; */
         gap: 3px;
 
         & button {
@@ -122,6 +125,37 @@ dialog p {
 
 .bop {
     animation: bop 200ms ease-out;
+}
+
+dialog {
+    width: 400px
+}
+
+dialog .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+dialog .total__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addToCart, .removeFromCart {
+    padding: 2px 20px;
+    background-color: rebeccapurple;
+    border: none;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.removeFromCart {
+    background-color: red;
 }
 
 @keyframes bop {
